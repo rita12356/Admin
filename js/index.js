@@ -31,20 +31,30 @@ function render() {
 for(let i = 0; i < buttons.length; i++) {
   let button = buttons[i];
   button.addEventListener(`click`, function() {
+      
     usersName.splice(i, 1);
+        
+
+           result.innerHTML = `Такой пользователь удален`;
+             
+
     render();
   });
 }
 }
 
+
 render(); 
+
 
 Add.addEventListener(`click`, function() {
   let newUser = input.value;
   if(usersName.indexOf(newUser) != -1) {
     result.innerHTML = `Такой пользователь уже есть в системе`;
+      
   } else{
     result.innerHTML = `Пользователь ${newUser} добавлен`;
+    
     usersName.push(newUser);
     
     render();
