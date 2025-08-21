@@ -1,3 +1,4 @@
+// контейнер всех пользователей
 let userscontainer = document.querySelector(`.users-container`);
 
 let template = `
@@ -14,6 +15,7 @@ let Add = document.querySelector(`#add`);
 let input = document.querySelector(`.form-control`);
 let result = document.querySelector(`#result`);
 
+// Функция отрисовки массива
 function render() {
   userscontainer.innerHTML = ``;
   for(let i = 0; i < usersName.length; i++ ) {
